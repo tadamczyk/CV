@@ -1,0 +1,10 @@
+node_modules
+dist
+public/data.json
+
+logs
+*.log
+npm-debug.log*
+
+.vscode/*
+!.vscode/extensions.json

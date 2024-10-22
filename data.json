@@ -1,0 +1,75 @@
+{
+  "$schema": "https://github.com/tadamczyk/CV/blob/master/schema.json",
+  "personalDetails": {
+    "fullName": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "+123456789",
+    "linkedinProfile": "https://linkedin.com/in/johndoe",
+    "githubProfile": "https://github.com/johndoe",
+    "portfolio": "https://johndoe.dev"
+  },
+  "summary": "Senior .NET Developer with over 10 years of experience in building scalable web applications and cloud solutions. Expertise in .NET Core, C#, and SQL with proven leadership in managing development teams and delivering microservices architecture.",
+  "workExperience": [
+    {
+      "jobTitle": "Senior .NET Developer",
+      "company": "XYZ Software",
+      "location": "Warsaw, Poland (Remote)",
+      "startDate": "2020-01",
+      "endDate": "Present",
+      "responsibilities": [
+        "Developed microservices using .NET Core, Docker, and Kubernetes, enabling the application to scale for 1M+ users.",
+        "Led a team of 5 developers, overseeing code reviews, pair programming, and implementing best practices in CI/CD.",
+        "Implemented cloud-based solutions in Azure, including SQL databases and serverless infrastructure."
+      ]
+    },
+    {
+      "jobTitle": "Software Engineer",
+      "company": "ABC Solutions",
+      "location": "Gdynia, Poland",
+      "startDate": "2015-06",
+      "endDate": "2019-12",
+      "responsibilities": [
+        "Built RESTful APIs using ASP.NET Core, improving system performance by 30%.",
+        "Worked on database optimization and query tuning in SQL Server.",
+        "Collaborated with frontend teams to integrate APIs with Angular-based applications."
+      ]
+    }
+  ],
+  "technicalSkills": {
+    "programmingLanguages": ["C#", "TypeScript", "SQL"],
+    "frameworks": [".NET Core", "ASP.NET", "Entity Framework"],
+    "databases": ["SQL Server", "SQLite", "PostgreSQL"],
+    "tools": ["Docker", "Kubernetes", "BenchmarkDotNet"],
+    "cloud": ["Azure", "AWS"],
+    "testing": ["NUnit", "Jest", "FluentAssertions"],
+    "devOps": ["GitHub Actions", "Jenkins", "Azure DevOps"],
+    "others": ["Git", "Webpack", "Express"]
+  },
+  "projects": [
+    {
+      "title": "Fleet Management System",
+      "description": "A web-based system for managing vehicle fleets, using microservices architecture integrated with GPS systems and SQL Server.",
+      "technologies": [".NET Core", "Docker", "Kubernetes", "SQL Server", "React"],
+      "outcome": "Reduced order processing time by 40%, improving customer satisfaction."
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Gdansk",
+      "degree": "Master of Science in Computer Science",
+      "startDate": "2010-09",
+      "endDate": "2015-06"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Microsoft Certified: Azure Developer Associate",
+      "date": "2021-05"
+    }
+  ],
+  "languages": {
+    "polish": "native",
+    "english": "advanced"
+  },
+  "interests": ["Hackathons", "Open Source Projects", "Cycling"]
+}

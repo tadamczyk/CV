@@ -1,0 +1,243 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/tadamczyk/CV/blob/master/schema.json",
+  "type": "object",
+  "properties": {
+    "personalDetails": {
+      "type": "object",
+      "properties": {
+        "fullName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "linkedinProfile": {
+          "type": "string",
+          "format": "uri"
+        },
+        "githubProfile": {
+          "type": "string",
+          "format": "uri"
+        },
+        "portfolio": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "fullName",
+        "email",
+        "phone"
+      ]
+    },
+    "summary": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "workExperience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "jobTitle": {
+            "type": "string"
+          },
+          "company": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "responsibilities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "jobTitle",
+          "company",
+          "startDate",
+          "responsibilities"
+        ]
+      }
+    },
+    "technicalSkills": {
+      "type": "object",
+      "properties": {
+        "programmingLanguages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "frameworks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "databases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tools": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cloud": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "testing": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "devOps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "others": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "technologies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "outcome": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "description",
+          "technologies"
+        ]
+      }
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "institution": {
+            "type": "string"
+          },
+          "degree": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "required": [
+          "institution",
+          "degree",
+          "startDate",
+          "endDate"
+        ]
+      }
+    },
+    "certifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "required": [
+          "name",
+          "date"
+        ]
+      }
+    },
+    "languages": {
+      "type": "object",
+      "properties": {
+        "polish": {
+          "type": "string"
+        },
+        "english": {
+          "type": "string"
+        }
+      }
+    },
+    "interests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "personalDetails",
+    "summary",
+    "workExperience",
+    "technicalSkills",
+    "projects",
+    "education",
+    "languages"
+  ]
+}
