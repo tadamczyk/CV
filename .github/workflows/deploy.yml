@@ -31,10 +31,26 @@ jobs:
           name: package
           path: ./src/dist
 
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./src/dist
+
   deploy:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Download artifact
@@ -44,3 +60,6 @@ jobs:
           path: ./src/dist
       - name: List
         run: cd src/dist && ls
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
