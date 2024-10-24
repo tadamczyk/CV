@@ -23,7 +23,7 @@ jobs:
         run: cd src && npm ci
 
       - name: Build project
-        run: cd src && npm run build
+        run: cd src && npm run build && cp -r dist/ ../dist/
 
       # - name: Upload production-ready build files
       #   uses: actions/upload-artifact@v3
@@ -37,7 +37,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./src/dist
+          path: ./dist
 
   deploy:
     name: Deploy
