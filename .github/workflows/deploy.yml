@@ -31,7 +31,7 @@ jobs:
           git config user.email "actions@github.com"
           git add dist -f
           git commit -m "Deploy to GitHub Pages"
-          git push -f origin `git subtree split --prefix dist main`:gh-pages
+          git push -f origin `git subtree split --prefix dist master`:gh-pages
 
       # - name: Upload production-ready build files
       #   uses: actions/upload-artifact@v3
