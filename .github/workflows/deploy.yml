@@ -25,11 +25,11 @@ jobs:
       - name: Build project
         run: cd src && npm run build
 
-      - name: Upload production-ready build files
-        uses: actions/upload-artifact@v3
-        with:
-          name: package
-          path: ./src/dist
+      # - name: Upload production-ready build files
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: package
+      #     path: ./src/dist
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
@@ -53,13 +53,13 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: package
-          path: ./src/dist
-      - name: List
-        run: cd src/dist && ls
+      # - name: Download artifact
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     name: package
+      #     path: ./src/dist
+      # - name: List
+      #   run: cd src/dist && ls
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
