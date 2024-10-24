@@ -43,4 +43,4 @@ jobs:
           name: package
           path: ./src/dist
       - name: List
-        run: ls
+        run: cd src/dist && ls
